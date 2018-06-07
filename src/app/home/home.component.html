@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<ul id="posts">
+  <li *ngFor="let post of posts">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
+
+<div class="alerts text-center">
+  <div *ngIf="loadingMessage" class="alert">
+    <p>Loading...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert">
+    {{ errorMessage }}
+  </div>
+</div>
